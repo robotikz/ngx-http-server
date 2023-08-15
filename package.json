@@ -1,11 +1,11 @@
 {
-    "name": "angular-http-server",
-    "version": "1.11.3",
-    "author": "Simon Hampton",
+    "name": "ngx-http-server",
+    "version": "1.0.0",
+    "author": "robotikz",
     "license": "ISC",
     "description": "Simple http server for developers of apps with client side routing",
-    "main": "angular-http-server.js",
-    "repository": "https://github.com/simonh1000/angular-http-server.git",
+    "main": "ngx-http-server.js",
+    "repository": "https://github.com/ast/ngx-http-server.git",
     "keywords": [
         "angular",
         "spa",
@@ -17,33 +17,13 @@
         "test": "mocha"
     },
     "contributors": [
-        {
-            "name": "dpraul"
-        },
-        {
-            "name": "Dale Myszewski",
-            "email": "dale@daleslab.com"
-        },
-        {
-            "name": "ckaeslin"
-        },
-        {
-            "name": "nick-bogdanov"
-        },
-        {
-            "name": "Aakash Khapare",
-            "email": "amkhapare@gmail.com"
-        },
-        {
-            "name": "AVierwind"
-        }
     ],
     "engines": {
         "node": ">=10.0.0"
     },
     "preferGlobal": true,
     "bin": {
-        "angular-http-server": "./lib/angular-http-server.js"
+        "ngx-http-server": "./lib/ngx-http-server.js"
     },
     "dependencies": {
         "http-proxy": "^1.18.1",

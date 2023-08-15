@@ -1,6 +1,6 @@
 # Single Page App dev-server
 
-A simple dev-server designed for Single Page App (SPA) developers. **`angular-http-server` is not, and makes no claims to be, a production server.**
+A simple dev-server designed for Single Page App (SPA) developers. **`ngx-http-server` is not, and makes no claims to be, a production server.**
 
 It returns a file if it exists (ex. your-icon.png, index.html), routes all other requests to index.html (rather than giving a 404 error) so that you SPA's routing can take over. The only time it will error out is if it can't locate the index.html file.
 
@@ -9,77 +9,83 @@ Originally designed for my Angular work, this dev-server will work with any Sing
 ## To use:
 
 ```sh
-npm install -g angular-http-server
+npm install -g ngx-http-server
 cd /path/to/site
-angular-http-server
+ngx-http-server
 ```
 
 And browse to `localhost:8080`.
 
 ## Options
 
+Specify a hostname using `-h <host name>`
+
+```sh
+ngx-http-server -h example.com
+```
+
 Specify a port using `-p <port number>`
 
 ```sh
-angular-http-server -p 9000
+ngx-http-server -p 9000
 ```
 
 Open in a default browser automatically by using `--open` alias `-o`
 
 ```sh
-angular-http-server --open
+ngx-http-server --open
 ```
 
 HTTPS can be enabled (using a generated self-signed certificate) with `--https` or `--ssl`
 
 ```sh
-angular-http-server --https
+ngx-http-server --https
 ```
 
 You may manually specify the paths to your self-signed certificate using the `--key` and `--cert` flags
 
 ```sh
-angular-http-server --https --key ./secret/key.pem --cert ./secret/cert.pem
+ngx-http-server --https --key ./secret/key.pem --cert ./secret/cert.pem
 ```
 
 [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) can be enabled with the --cors flag
 
 ```sh
-angular-http-server --cors
+ngx-http-server --cors
 ```
 
 Specify a path to serve from
 
 ```sh
-angular-http-server --path example
+ngx-http-server --path example
 ```
 
 Specify the base href of the application
 
 ```sh
-angular-http-server --baseHref myapp
+ngx-http-server --baseHref myapp
 ```
 
 Specify the rootFile of the application
 
 ```sh
-angular-http-server --rootFile myindex.html
+ngx-http-server --rootFile myindex.html
 ```
 
 Disable logging
 
 ```sh
-angular-http-server --silent
+ngx-http-server --silent
 ```
 
 All options can be specified by a config file, optionally read via `--config` flag.
 CLI options take precedence over any options read from the config file.
 
 ```sh
-angular-http-server --config configs/angular-http-server.config.js
+ngx-http-server --config configs/ngx-http-server.config.js
 ```
 
-Feedback via: https://github.com/simonh1000/angular-http-server
+Feedback via: https://github.com/simonh1000/ngx-http-server
 
 ## Config File
 
@@ -120,7 +126,7 @@ The proxy must be configured in the config file.
 To enable this proxy:
 
 ```sh
-angular-http-server --config configs/angular-http-server.config.js --useProxy true
+ngx-http-server --config configs/ngx-http-server.config.js --useProxy true
 ```
 
 #### configuring proxy
@@ -181,5 +187,5 @@ $ npm run test
 Testing - try:
 
 ```sh
-node angular-http-server.js --path example --ssl -p 9000
+node ngx-http-server.js --path example --ssl -p 9000
 ```
