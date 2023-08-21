@@ -1,6 +1,6 @@
 {
     "name": "ngx-http-server",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "author": "robotikz",
     "license": "ISC",
     "description": "Simple http server for developers of apps with client side routing",
@@ -16,8 +16,7 @@
     "scripts": {
         "test": "mocha"
     },
-    "contributors": [
-    ],
+    "contributors": [],
     "engines": {
         "node": ">=10.0.0"
     },
@@ -29,6 +28,7 @@
         "http-proxy": "^1.18.1",
         "mime": "^2.5.2",
         "minimist": "^1.2.8",
+        "ngx-http-server": "^1.0.3",
         "opn": "^5.5.0",
         "pem": "^1.14.6"
     },
